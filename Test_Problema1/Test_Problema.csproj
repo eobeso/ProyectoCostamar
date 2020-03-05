@@ -6,8 +6,8 @@
     <ProjectGuid>{0E403C87-22A0-49D2-863B-CFEE74F8791E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Test_Problema1</RootNamespace>
-    <AssemblyName>Test_Problema1</AssemblyName>
+    <RootNamespace>Test_Problema</RootNamespace>
+    <AssemblyName>Test_Problema</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
