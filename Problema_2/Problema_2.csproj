@@ -117,13 +117,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Datos\Datos.csproj">
-      <Project>{eb087cb9-6210-4996-b4ba-8e16a0302c66}</Project>
-      <Name>Datos</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Entidad\Entidad.csproj">
       <Project>{4945bd8b-5b5e-445d-babd-a37bf642ab0d}</Project>
       <Name>Entidad</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Negocio\Negocio.csproj">
+      <Project>{2dddae27-8d6b-448f-a730-db6fbf488dab}</Project>
+      <Name>Negocio</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

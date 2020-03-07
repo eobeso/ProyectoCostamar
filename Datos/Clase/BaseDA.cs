@@ -1,16 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Entidad;
 using Comun;
 
 namespace Datos
 {
-    public class Base
+    public class BaseDA
     {
-        public Base ()
+        public void Base ()
         {
             if (VariablesPublicas.ListaVuelos.ToList().Count() > 0)
             {
@@ -32,25 +29,17 @@ namespace Datos
             VariablesPublicas.ListaVuelos.Add(new Vuelos { CodPaisDestino = (int)Paises.Peru, CodPaisOrigen = (int)Paises.Argentina, FechaSalida = DateTime.Now.AddDays(-1), FechaRetorno = DateTime.Now.AddDays(+15), CantEscalas = (int)Escalas.Cuatro, Equipaje = true, Precio = 150 });
             VariablesPublicas.ListaVuelos.Add(new Vuelos { CodPaisDestino = (int)Paises.Argentina, CodPaisOrigen = (int)Paises.Chile, FechaSalida = DateTime.Now.AddDays(-1), FechaRetorno = DateTime.Now.AddDays(+15), CantEscalas = (int)Escalas.Tres, Equipaje = true, Precio = 120 });
             VariablesPublicas.ListaVuelos.Add(new Vuelos { CodPaisDestino = (int)Paises.Peru, CodPaisOrigen = (int)Paises.Colombia, FechaSalida = DateTime.Now.AddDays(-1), FechaRetorno = DateTime.Now.AddDays(+15), CantEscalas = (int)Escalas.Una, Equipaje = false, Precio = 150 });
-        }
-        public ListaVuelos BusquedaListaVuelos(int vCantidadEscalas, bool vEquipaje, double vPrecio)
-        {
-            ListaVuelos ListaVuelos = new ListaVuelos();                    
-            try
+            if (VariablesPublicas.ListaPais.ToList().Count() > 0)
             {
-                if (VariablesPublicas.ListaVuelos.ToList().Count > 0)
-                {
-                    ListaVuelos.AddRange((from q in VariablesPublicas.ListaVuelos
-                                          where q.CantEscalas == vCantidadEscalas && q.Equipaje == vEquipaje && q.Precio == vPrecio
-                                          select q).ToList());
-                }
+                VariablesPublicas.ListaPais.Clear();
             }
-            catch (Exception ex)
-            {
-                throw ex;
-            }
-            return ListaVuelos;
+            VariablesPublicas.ListaPais.Add(new Pais { CodPais = (int)Paises.Peru, Descripcion = "Peru" });
+            VariablesPublicas.ListaPais.Add(new Pais { CodPais = (int)Paises.Chile, Descripcion = "Chile" });
+            VariablesPublicas.ListaPais.Add(new Pais { CodPais = (int)Paises.Argentina, Descripcion = "Argentina" });
+            VariablesPublicas.ListaPais.Add(new Pais { CodPais = (int)Paises.Venezuela, Descripcion = "Venezuela" });
+            VariablesPublicas.ListaPais.Add(new Pais { CodPais = (int)Paises.Colombia, Descripcion = "Colombia" });
         }
+        
 
     }
 }

@@ -40,7 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Clase\Base.cs" />
+    <Compile Include="Clase\BaseDA.cs" />
+    <Compile Include="Clase\ListaVuelosDA.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

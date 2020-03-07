@@ -4,27 +4,97 @@ namespace Entidad
 {
     public class Vuelos
     {
-        public Vuelos() //Constructor
-        {
-        }
-        public Vuelos(int codPaisOrigen,int codPaisDestino,DateTime fechaSalida,DateTime fechaRetorno,int cantEscalas,bool equipaje,double precio)
-        {
-            CodPaisOrigen = codPaisOrigen;
-            CodPaisDestino = codPaisDestino;
-            FechaSalida = fechaSalida;
-            FechaRetorno = fechaRetorno;
-            CantEscalas = cantEscalas;
-            Equipaje = equipaje;
-            Precio = precio;
-        }      
+        private int codPaisOrigen;
+        private int codPaisDestino;
+        private DateTime fechaSalida;
+        private DateTime fechaRetorno;
+        private int cantEscalas;
+        private bool equipaje;
+        private double precio;
 
-        public int CodPaisOrigen { get; set; }
-        public int CodPaisDestino { get; set; }
-        public DateTime FechaSalida { get; set; }
-        public DateTime FechaRetorno { get; set; }
-        public int CantEscalas { get; set; }
-        public bool Equipaje { get; set; }
-        public double Precio { get; set; }
-        
+        public int CodPaisOrigen
+        {
+            get
+            {
+                return codPaisOrigen;
+            }
+
+            set
+            {
+                codPaisOrigen = value;
+            }
+        }
+        public int CodPaisDestino
+        {
+            get
+            {
+                return codPaisDestino;
+            }
+
+            set
+            {
+                codPaisDestino = value;
+            }
+        }
+        public DateTime FechaSalida
+        {
+            get
+            {
+                return fechaSalida;
+            }
+
+            set
+            {
+                fechaSalida = value;
+            }
+        }
+        public DateTime FechaRetorno
+        {
+            get
+            {
+                return fechaRetorno;
+            }
+
+            set
+            {
+                fechaRetorno = value;
+            }
+        }
+        public int CantEscalas
+        {
+            get
+            {
+                return cantEscalas;
+            }
+
+            set
+            {
+                cantEscalas = value;
+            }
+        }
+        public bool Equipaje
+        {
+            get
+            {
+                return equipaje;
+            }
+
+            set
+            {
+                equipaje = value;
+            }
+        }
+        public double Precio
+        {
+            get
+            {
+                return precio;
+            }
+
+            set
+            {
+                precio = value;
+            }
+        }
     }
 }

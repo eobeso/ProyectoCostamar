@@ -10,5 +10,6 @@ namespace Comun
     public class VariablesPublicas
     {
         public static ListaVuelos ListaVuelos = new ListaVuelos();
+        public static ListaPais ListaPais = new ListaPais();
     }
 }

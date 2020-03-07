@@ -1,4 +1,4 @@
-﻿using Datos;
+﻿using Negocio;
 using Entidad;
 
 namespace Problema_2
@@ -7,11 +7,11 @@ namespace Problema_2
     {
         public ListaVuelos BusquedaListaVuelos(int CantidadEscalas, bool Equipaje, double Precio)
         {
-            ListaVuelos lista = new ListaVuelos();
-            Base objBase;
-            objBase = new Base();
-            lista = objBase.BusquedaListaVuelos(CantidadEscalas, Equipaje, Precio);
-            return lista;
+            ListaVuelos oListaVuelos = new ListaVuelos();
+            BaseBL oBaseBL = new BaseBL();
+            oBaseBL.Base();
+            oListaVuelos = oBaseBL.BusquedaListaVuelos(CantidadEscalas, Equipaje, Precio);
+            return oListaVuelos;
         }
     }
 }
