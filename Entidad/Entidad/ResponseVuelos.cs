@@ -1,41 +1,43 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Entidad
 {
-    public class Vuelos
+    public class ResponseVuelos
     {
-        private int codPaisOrigen;
-        private int codPaisDestino;
+        private string paisOrigen;
+        private string paisDestino;
         private DateTime fechaSalida;
         private DateTime fechaRetorno;
-        private int cantEscalas;
-        private bool equipaje;
+        private string escalas;
+        private string equipaje;
         private double precio;
-        private string clase;
-        private string aerolinea;
 
-        public int CodPaisOrigen
+        public string PaisOrigen
         {
             get
             {
-                return codPaisOrigen;
+                return paisOrigen;
             }
 
             set
             {
-                codPaisOrigen = value;
+                paisOrigen = value;
             }
         }
-        public int CodPaisDestino
+        public string PaisDestino
         {
             get
             {
-                return codPaisDestino;
+                return paisDestino;
             }
 
             set
             {
-                codPaisDestino = value;
+                paisDestino = value;
             }
         }
         public DateTime FechaSalida
@@ -61,20 +63,8 @@ namespace Entidad
             {
                 fechaRetorno = value;
             }
-        }
-        public int CantEscalas
-        {
-            get
-            {
-                return cantEscalas;
-            }
-
-            set
-            {
-                cantEscalas = value;
-            }
-        }
-        public bool Equipaje
+        }      
+        public string Equipaje
         {
             get
             {
@@ -98,28 +88,16 @@ namespace Entidad
                 precio = value;
             }
         }
-        public string Clase
+        public string Escalas
         {
             get
             {
-                return clase;
+                return escalas;
             }
 
             set
             {
-                clase = value;
-            }
-        }
-        public string Aerolinea
-        {
-            get
-            {
-                return aerolinea;
-            }
-
-            set
-            {
-                aerolinea = value;
+                escalas = value;
             }
         }
     }

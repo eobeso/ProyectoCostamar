@@ -1,17 +1,19 @@
 ﻿using Negocio;
 using Entidad;
+using System;
+using System.Collections.Generic;
 
 namespace Problema_2
 {
     public class ServicioConsultaVuelos : IServicioConsultaVuelos
     {
-        public ListaVuelos BusquedaListaVuelos(int CantidadEscalas, bool Equipaje, double Precio)
+        public List<ResponseVuelos> BusquedaListaVuelos(RequestVuelos oRequestVuelos)
         {
-            ListaVuelos oListaVuelos = new ListaVuelos();
+            List<ResponseVuelos> oResponseVuelos = new List<ResponseVuelos>();            
             BaseBL oBaseBL = new BaseBL();
             oBaseBL.Base();
-            oListaVuelos = oBaseBL.BusquedaListaVuelos(CantidadEscalas, Equipaje, Precio);
-            return oListaVuelos;
+            oResponseVuelos = oBaseBL.BusquedaListaVuelos(oRequestVuelos);
+            return oResponseVuelos;
         }
     }
 }

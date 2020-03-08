@@ -7,7 +7,7 @@ namespace Datos
 {
     public class ListaVuelosDA
     {
-        public ListaVuelos BusquedaListaVuelos(int vCantidadEscalas, bool vEquipaje, double vPrecio)
+        public ListaVuelos BusquedaListaVuelos(RequestVuelos oRequestVuelos)
         {
             ListaVuelos ListaVuelos = new ListaVuelos();
             try
@@ -15,7 +15,7 @@ namespace Datos
                 if (VariablesPublicas.ListaVuelos.ToList().Count > 0)
                 {
                     ListaVuelos.AddRange((from q in VariablesPublicas.ListaVuelos
-                                          where q.CantEscalas == vCantidadEscalas && q.Equipaje == vEquipaje && q.Precio == vPrecio
+                                          where q.CantEscalas == oRequestVuelos.CantidadEscalas && q.Equipaje == oRequestVuelos.Equipaje && q.Precio == oRequestVuelos.Precio
                                           select q).ToList());
                 }
             }

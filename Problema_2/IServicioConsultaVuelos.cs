@@ -1,4 +1,5 @@
 ﻿using Entidad;
+using System.Collections.Generic;
 using System.ServiceModel;
 
 namespace Problema_2
@@ -7,6 +8,6 @@ namespace Problema_2
     public interface IServicioConsultaVuelos
     {
         [OperationContract]
-        ListaVuelos BusquedaListaVuelos(int vCantidadEscalas, bool vEquipaje, double vPrecio);
+        List<ResponseVuelos> BusquedaListaVuelos(RequestVuelos oRequestVuelos);
     }
 }
